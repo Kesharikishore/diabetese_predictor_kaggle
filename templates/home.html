@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block title %}
+Home
+{%endblock%}
+{% block body %}
+<form class="myform" action="/" method='POST'>
+	<h6>Pregnancies :</h6>
+	<input type="number" name="Pregnancies"/>
+	<h6>Glucose :</h6>
+	<input type="number" name="Glucose"/>
+	<h6>BloodPressure :</h6>
+	<input type="number" step="any" name="BloodPressure"/>
+	<h6>SkinThickness :</h6>
+	<input type="number" step="any" name="SkinThickness"/>
+	<h6>Insulin :</h6>
+	<input type="number" step="any" name="Insulin"/>
+	<h6>BMI :</h6>
+	<input type="number" step="any" name="BMI"/>
+	<h6>DiabetesPedigreeFunction :</h6>
+	<input type="number" step="any" name="DiabetesPedigreeFunction"/>
+	<h6>Age :</h6>
+	<input type="number" name="Age"/>
+	<button class="btn #7986cb indigo lighten-2" type="submit">Post it</button>
+	{% if data :%}
+	<h4 style="color:{{data[1]}}">
+	{{data[0]}}
+	</h4>
+	{% endif %}
+</form>
+{%endblock%}

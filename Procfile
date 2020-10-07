@@ -1,0 +1,1 @@
+web: gunicorn pims_flask:app
